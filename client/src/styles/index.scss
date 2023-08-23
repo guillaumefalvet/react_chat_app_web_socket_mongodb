@@ -25,7 +25,7 @@ code {
   justify-content: center;
   height: 90vh;
 
-  width: 90vh;
+  width: 90vw;
   &__list {
     margin-top: 20px;
   }
@@ -35,7 +35,7 @@ code {
 }
 form {
   position: absolute;
-  bottom: 0;
+  bottom: 90px;
   margin-left: auto;
   margin-right: auto;
 }
