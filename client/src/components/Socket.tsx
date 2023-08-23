@@ -14,7 +14,7 @@ export default function SocketComponent() {
   const [newMessage, setNewMessage] = useState("");
 
   useEffect(() => {
-    socket = io(import.meta.env.VITE_BASE_URL);
+    socket = io();
     // listen to the socket to receive all messages
     socket.on("messages", (receivedMessages: Message[]) => {
       setMessages(receivedMessages);
