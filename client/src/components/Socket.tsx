@@ -12,7 +12,6 @@ let socket: SocketType;
 export default function SocketComponent() {
   const [allMessages, setMessages] = useState<Message[]>([]);
   const [newMessage, setNewMessage] = useState("");
-  const [messageToDelete, setMessageToDelete] = useState<string | null>(null); // Track the message to delete
 
   useEffect(() => {
     socket = io();
@@ -34,7 +33,6 @@ export default function SocketComponent() {
     };
   }, []);
   const handleDelete = (messageId: string) => {
-    setMessageToDelete(messageId); // Set the message to delete
     socket.emit("message-delete", { _id: messageId });
     console.log(messageId);
   };
