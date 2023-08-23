@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import "./App.css";
-import SocketComponent from "./components/Socket"; // Update the path
+import SocketComponent from "./Socket"; // Update the path
 
 function App() {
   useEffect(() => {

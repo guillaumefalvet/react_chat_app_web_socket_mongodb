@@ -14,7 +14,7 @@ export default function SocketComponent() {
   const [newMessage, setNewMessage] = useState("");
 
   useEffect(() => {
-    socket = io();
+    socket = io(import.meta.env.VITE_BASE_URL);
     // listen to the socket to receive all messages
     socket.on("messages", (receivedMessages: Message[]) => {
       setMessages(receivedMessages);
@@ -53,10 +53,10 @@ export default function SocketComponent() {
   };
 
   return (
-    <div>
-      <ul>
+    <section className="container">
+      <ul className="container__list">
         {allMessages.map((message, index) => (
-          <li key={index}>
+          <li key={index} className="container__list-item">
             <button onClick={() => handleDelete(message._id)}>delete</button>
             {message.timestamp} - {message.message}
           </li>
@@ -71,6 +71,6 @@ export default function SocketComponent() {
         />
         <button type="submit">Send</button>
       </form>
-    </div>
+    </section>
   );
 }
