@@ -1,0 +1,28 @@
+{
+    "$schema": "https://dbclient-release.oss-cn-hongkong.aliyuncs.com/dbclient/schema.json",
+    "nosql": {
+        "1692728660828": {
+            "host": "127.0.0.1",
+            "port": 27017,
+            "dbType": "MongoDB",
+            "timezone": "+00:00",
+            "useConnectionString": false,
+            "usingSSH": false,
+            "useSocksProxy": false,
+            "global": false,
+            "savePassword": "Forever",
+            "hideSystemSchema": true,
+            "readonly": false,
+            "sort": 11,
+            "useSSL": false,
+            "encrypt": true,
+            "authType": "default",
+            "esAuth": "none",
+            "showHidden": true,
+            "srv": false,
+            "key": "1692728660828",
+            "connectionKey": "nosql.connections"
+        }
+    },
+    "database": {}
+}
